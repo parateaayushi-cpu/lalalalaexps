@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@200;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-headline: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #C5A059;
+  --color-accent: #C5A059;
+  --color-surface: #0A0A0A;
+  --color-surface-container: #141414;
+  --color-surface-container-low: #0F0F0F;
+  --color-surface-container-high: #1A1A1A;
+  --color-on-surface: #F2F2F2;
+  --color-on-surface-variant: #888888;
+  --color-border: #262626;
+  --color-success: #22C55E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-body antialiased selection:bg-accent selection:text-surface;
+  }
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #a88440 100%);
+}
+
+.elegant-border {
+  border: 1px solid var(--color-border);
+}
+
+.elegant-border-b {
+  border-bottom: 1px solid var(--color-border);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
